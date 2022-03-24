@@ -16,6 +16,7 @@ import SignIn from "./components/signin";
 import { useDispatch } from 'react-redux';
 import './App.css';
 import ProductList from "./components/productList";
+import { IsUserAuthenticated } from "./components/userAuth";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -31,6 +32,8 @@ export default function App() {
         <Route path="/productlist" element={<ProductList />} />
         <Route path="/detail/:id" element={<ProductCard />} />
         <Route path="/cart" element={<Cart />} />
+        {/* <Route element={<IsUserAuthenticated />}> */}
+        {/* <Route path="/cart" element={<Cart />} /></Route> */}
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
 

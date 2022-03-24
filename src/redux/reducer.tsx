@@ -54,6 +54,8 @@ export default function productsReducer(state = initialState, action: ProductAct
       if (action.payload.category !== "All") {
         products = state.products.filter((product) => {
           return (
+          //@ts-ignore
+            // eslint-disable-next-line eqeqeq
             product.category == action.payload.category
           )
         });

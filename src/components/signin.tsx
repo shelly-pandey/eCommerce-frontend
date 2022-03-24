@@ -23,8 +23,10 @@ export default function SignIn() {
         validationSchema={userSchema}
         onSubmit={(values) => {
           axios
-            .post("http://localhost:5000/api/v1/users", values)
-            .then((data: any) => console.log(data));
+          .post("http://localhost:5000/api/v1/users ", values)
+          .then((data: any) => localStorage.setItem("token", JSON.stringify(data.data.token)))
+          .catch(console.log);
+        console.log(values);
         }}
       >
         {({ values, errors, touched }) => (
