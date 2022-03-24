@@ -16,7 +16,7 @@ import SignIn from "./components/signin";
 import { useDispatch } from 'react-redux';
 import './App.css';
 import ProductList from "./components/productList";
-import { IsUserAuthenticated } from "./components/userAuth";
+//import { IsUserAuthenticated } from "./components/userAuth";
 
 export default function App() {
   const dispatch = useDispatch();
