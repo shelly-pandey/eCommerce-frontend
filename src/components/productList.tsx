@@ -61,7 +61,7 @@ export default function ProductList() {
               <Card.Title><Link to={`/detail/${product.id}`}>{product.title}</Link></Card.Title>
               <Card.Subtitle className="title">{product.category}</Card.Subtitle>
               <br></br>
-              <Card.Subtitle className="title">{`£`}{product.price}</Card.Subtitle>
+              <Card.Subtitle className="title">DKK {product.price}</Card.Subtitle>
               <Card.Text>
 
               </Card.Text>

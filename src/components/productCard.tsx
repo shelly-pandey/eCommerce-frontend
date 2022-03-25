@@ -40,7 +40,7 @@ export default function ProductCard_() {
             <br></br>
             <Card.Subtitle className="title">Rating: {product.rating.rate} out of {product.rating.count} reviews</Card.Subtitle>
             <br></br>
-            <Card.Subtitle className="title">{`£`}{product.price}</Card.Subtitle>
+            <Card.Subtitle className="title">DKK {product.price}</Card.Subtitle>
             <Card.Text>
               {product.description}
             </Card.Text>
