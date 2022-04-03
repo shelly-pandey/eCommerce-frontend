@@ -1,18 +1,15 @@
 import { Link } from 'react-router-dom';
 import { Navbar, Container, Carousel, Nav } from 'react-bootstrap';
-
 import logo from '../assets/images/tag.png';
 import image10 from '../assets/images/img10.jpg';
-
 import image12 from '../assets/images/img12.jpg';
 import image11 from '../assets/images/img11.jpg';
 
 
 export default function Home() {
 
-
     return (
-        <div>
+        <>
             <Navbar variant="light" expand="lg" id="top-navbar">
                 <Container fluid>
                     <img src={logo} alt="..." height='70px' width='90px'></img>
@@ -70,6 +67,6 @@ export default function Home() {
             </Carousel>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></link>
 
-        </div>
+        </>
     )
 }

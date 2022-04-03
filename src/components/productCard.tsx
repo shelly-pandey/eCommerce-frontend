@@ -1,4 +1,3 @@
-
 import { rootState } from '../redux/rootReducer';
 import { Button, Card } from 'react-bootstrap';
 
@@ -14,19 +13,18 @@ export default function ProductCard_() {
     id: string;
   };
 
-  const {id} = useParams<ProductParams>();   //  Type 'Readonly<Params<string>>' is not assignable to type 'string'
-  
+  const {id} = useParams<ProductParams>(); 
   
   //let id:string = useParams() as unknown as string;
   const dispatch = useDispatch();
   const filteredProducts = useSelector((state: rootState) => state.productsReducer.filteredProducts);
  
-      // @ts-ignore
+  // @ts-ignore
   // eslint-disable-next-line eqeqeq
   let product = filteredProducts.filter((product) => product.id == (id))[0];
   
   return (
-    <div>
+    <>
       <Header />
       
       <Link to={'/productlist'} className="btn btn-primary">Continue Shopping!</Link>
@@ -49,8 +47,6 @@ export default function ProductCard_() {
         </Card>
 
       </div>
-    </div>
+    </>
   )
 }
-
-

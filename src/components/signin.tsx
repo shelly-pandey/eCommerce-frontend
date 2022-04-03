@@ -1,4 +1,3 @@
-import React from "react";
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import '../App.css';
@@ -32,7 +31,6 @@ export default function SignIn() {
         {({ values, errors, touched }) => (
           <div className="catagories">
             <Form className="section2">
-
 
               <div className="box-1" >Log in to your account </div>
 
@@ -76,5 +74,3 @@ const userSchema = Yup.object().shape({
     .required("required"),
 
 });
-
-

@@ -96,17 +96,7 @@ export function deleteAllFromCart(): DeleteAllFromCart {
     }
 }
 
-type NavigateFromCartAction = {
-    type: "NAVIGATE_FROM_CART",
-    payload: { product: Product }
-}
 
-export function Navigate(product: Product): NavigateFromCartAction {
-    return {
-        type: "NAVIGATE_FROM_CART",
-        payload: { product }
-    }
-}
 
 type changeThemeAction = {
     type: "THEME_CHANGE",
@@ -120,17 +110,7 @@ export function changeTheme(darktheme: boolean): changeThemeAction {
     }
 }
 
-type IncreaseQuantityAction = {
-    type: "INCREASE_QUANTITY",
-    payload: { product: Product }
-}
 
-export function updateQuantity(product: Product): IncreaseQuantityAction {
-    return {
-        type: "INCREASE_QUANTITY",
-        payload: { product }
-    }
-}
 
 type ProductByCategoryAction = {
     type: "PRODUCT_BY_CATEGORY",
@@ -147,4 +127,4 @@ export function productByCategory(category: string): ProductByCategoryAction {
 
 
 export type ProductActions = GetProducts | FilteredProductsAction | DeleteAllFromCart | DeleteFromCartAction | AddToCartAction
-    | NavigateFromCartAction | IncreaseQuantityAction | changeThemeAction | ProductByCategoryAction | UpdatePriceAction
+    | changeThemeAction | ProductByCategoryAction | UpdatePriceAction

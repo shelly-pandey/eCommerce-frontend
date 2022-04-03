@@ -16,6 +16,8 @@ export default function cartreducer(state = initialState, action: ProductActions
 
   switch (action.type) {
     case "ADD_TO_CART": {
+      console.log('state.cartProducts ' + state.cartProducts)
+      console.log('action.payload.movie.title ' + action.payload.product.title)
       let cartItems = state.cartProducts.map(product => product && product.title);
       action.payload.product.quantity = 1;
 
@@ -32,7 +34,7 @@ export default function cartreducer(state = initialState, action: ProductActions
       for (const item of cartItems) {
         if (action.payload.product.id === item.id) {
           item.quantity = parseInt(action.payload.quantity)
-          //item.price = item.price * item.quantity
+          
         }
       }
 
@@ -58,16 +60,7 @@ export default function cartreducer(state = initialState, action: ProductActions
       }
 
     }
-
-    case "INCREASE_QUANTITY": {
-      let cartItems = state.cartProducts.map(product => product.title);
-
-      return {
-        ...state,
-        cartProducts: cartItems.includes(action.payload.product.title) ? state.cartProducts : [...state.cartProducts, action.payload.product],
-      }
-
-    }
+ 
 
     default:
       return state;

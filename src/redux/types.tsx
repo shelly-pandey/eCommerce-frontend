@@ -15,10 +15,6 @@ export type SearchProp = {
     handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export type eventhandle = {
-    onClick: (event: React.MouseEvent<HTMLElement>) => void;
-}
-
 export type themeChange = {
     theme: any
 

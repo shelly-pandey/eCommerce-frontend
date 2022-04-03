@@ -1,7 +1,6 @@
 import { deleteAllFromCart, deleteFromCart, updatePrice } from '../redux/actions';
 import { rootState } from '../redux/rootReducer';
 import Header from './navigation';
-
 import { InputLabel } from '@mui/material';
 import { Button, Form, Table } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux'
@@ -14,13 +13,10 @@ export default function Cart() {
 
   let total = cartProducts.reduce((subtotal, product) => subtotal + (product.price * product.quantity), 0);
   let { darktheme } = useSelector((state: rootState) => state.productsReducer);
-
-
   //console.log(' cart ' + JSON.stringify(cartProducts));
 
-
   return (
-    <div>
+    <>
       <Header />
       <div>
         <Link to={'/productlist'} className="btn btn-primary">Continue Shopping!</Link>
@@ -77,7 +73,7 @@ export default function Cart() {
           </Table>
         </div>
       }
-    </div>
+    </>
   )
 }
 
